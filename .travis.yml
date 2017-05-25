@@ -1,0 +1,42 @@
+#   A basic travis.yml boilerplate for Django projects
+#
+#   The set-up assumes a postgreSQL database.
+#
+
+language: python
+
+python:
+  - 3.5
+  - 3.4
+
+services: postgresql
+
+env:
+  - DJANGO=1.10.2
+
+before_install:
+  - export DJANGO_SETTINGS_MODULE=secret_santa.settings.production
+  - export PYTHONPATH=$HOME/builds/sergiormb/secret_santa
+  - export PIP_USE_MIRRORS=true
+
+install:
+  - pip install -r requirements.txt
+  - pip install django==$DJANGO --quiet
+  - pip install psycopg2 --quiet
+  - pip install flake8
+  - pip install coveralls
+
+before_script:
+  - psql -c "CREATE DATABASE mydb;" -U postgres
+
+script:
+  - python manage.py test
+  - coverage run --source=base,api ./manage.py test --settings=secret_santa.settings.production
+
+after_success:
+  - coverage report
+  - coveralls
+
+notifications:
+  email:
+    - sergiormb88@gmail.com

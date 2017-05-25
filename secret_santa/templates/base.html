@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+{% load static %}
+{% load i18n %}
+<html>
+  <head>
+    {% block head %}
+    <title>Secret Santa {% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="eQGTeLbZEPWta-yzQZ9LLF8Wly0pkSa7QOSp0TvyXhg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endblock %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+
+  </head>
+  <body class="{% block classbody %}{% endblock %}">
+
+    <!-- Page Wrapper -->
+      <div id="page-wrapper">
+
+        <!-- Header -->
+          <header id="header" class="alt">
+            <h1><a href="/">{% trans "Secret Santa" %}</a></h1>
+            
+
+             
+            <nav id="nav">
+
+              <ul>
+                <li class="special">
+                  <a href="#menu" class="menuToggle">{% if user.is_authenticated %}<i class="fa fa-user-o" aria-hidden="true"></i>
+                    {{user.username}} | {% endif %} <span>{% trans "Menu" %}</span></a>
+                  <div id="menu">
+                    <ul>
+                      <li> <div>
+                      {% with 'es en' as list %}
+                        {% for lang in list.split %}
+
+                            {% get_language_info for lang as lang_info %}
+                                <a href="?set_language={{lang}}">
+                                    <img src="/static/img/flag_{{lang}}.gif" alt="{% trans 'flag' %} {% trans lang_name %}" />
+                                </a>
+                        {% endfor %}
+                    {% endwith %}
+                      </div>
+                      </li>
+                      {% if user.is_authenticated %}
+                      <li><a href="/">{% trans "Home" %}</a></li>
+                      <li><a href="{% url 'inscription_list' %}">{% trans "Inscriptions" %}</a></li>
+                      <li><a href="{% url 'group_list' %}">{% trans "Join an existing group" %}</a></li>
+                      <li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
+                      {% else %}
+                      <li><a href="{% url 'login' %}">{% trans "Sign in" %}</a></li>
+                      <li><a href="{% url 'signup' %}">{% trans "Sign up" %}</a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </header>
+            {% block home %}
+            {% endblock %}
+  <section class="wrapper style5">
+    {% if messages %}
+   <div class="inner">
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+{% block content %}
+{% endblock %}
+    </section>
+
+<!-- Footer -->
+  <footer id="footer">
+    <ul class="icons">
+      <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+      <li><a href="mailto:sergiormb88@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; Sergio Pino Márquez</li>
+    </ul>
+  </footer>
+
+</div>
+    <!-- Scripts -->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+      <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+      <script src="{% static 'js/skel.min.js' %}"></script>
+      <script src="{% static 'js/util.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      {% block javascript %}
+      {% endblock %}
+  </body>
+</html>

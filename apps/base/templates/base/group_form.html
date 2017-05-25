@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Group" %}{% endblock %}
+
+{% block content %}
+    <div class="inner">
+
+        <section>
+            <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="{% trans 'Save' %}" />
+            </form>
+        </section>                  
+
+    </div>
+
+{% endblock %}

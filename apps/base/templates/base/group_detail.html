@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+
+{% block title %}{% trans "Group" %}{% endblock %}
+
+{% block content %}
+    <div class="inner">
+        <section>
+            <h2>{{group.name}}</h2>
+            <h3>{% trans "Creator" %}: {{group.creator}}</h3>
+            <h3>{% trans "Status" %}: {{group.status}}</h3>
+            <h3>{% trans "End date" %}: {{group.end_date|default:"---"}}</h3>
+        </section>                  
+        <section>
+            <h3>{% trans "Participants" %}</h2>
+            <ul>
+                {% for user in group.users %}
+                <li>{{user.username}}</li>
+                {% empty %}
+                {% trans "There is no participant" %}
+                {% endfor %}
+            </ul>
+            <hr>
+            {% if request.user not in group.users %}
+            <a class="button special" href="{% url 'inscription_create' group.id %}"> {% trans "Sign up for the group" %}</a>
+            {% endif %}
+            {% if request.user == group.creator and group.status != 'close' and group.users|length > 2 %}
+            <a class="button special"  href="{% url 'group_close' group.id %}"> {% trans "Close group" %}</a>
+            {% endif %}
+            * {% trans "You need more than 2 participants to close the group" %}
+        </section>   
+    </div>
+{% endblock %}
+

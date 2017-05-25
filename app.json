@@ -1,0 +1,37 @@
+{
+  "name": "django-secret-santa",
+  "description": "A project made in Django 1.10 for the exchange of gifts at Christmas",
+  "keywords": ["python", "django"],
+  "scripts": {
+  },
+  "env": {
+    "DEBUG_COLLECTSTATIC": {
+      "required": true
+    },
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "ENVIRONMENT": {
+      "required": true
+    },
+    "PORT": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "required": true
+    },
+    "WEB_CONCURRENCY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

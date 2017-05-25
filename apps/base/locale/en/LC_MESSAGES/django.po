@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-24 17:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:10
+msgid "Email address"
+msgstr ""
+
+#: forms.py:11
+msgid "Required."
+msgstr ""
+
+#: models.py:10
+msgid "Open"
+msgstr ""
+
+#: models.py:11
+msgid "Moving"
+msgstr ""
+
+#: models.py:12
+msgid "Close"
+msgstr ""
+
+#: models.py:25 templates/base/group_detail.html:11
+msgid "Creator"
+msgstr ""
+
+#: models.py:28
+msgid "Created date"
+msgstr ""
+
+#: models.py:30 templates/base/group_detail.html:13
+msgid "End date"
+msgstr ""
+
+#: models.py:33 templates/base/group_detail.html:12
+msgid "Status"
+msgstr ""
+
+#: models.py:77
+msgid "User"
+msgstr ""
+
+#: models.py:79 tables.py:10 tables.py:21 templates/base/group_detail.html:5
+#: templates/base/group_form.html:4
+msgid "Group"
+msgstr ""
+
+#: models.py:80
+msgid "Preferences"
+msgstr ""
+
+#: tables.py:35
+msgid "Name"
+msgstr ""
+
+#: templates/base/group_detail.html:16
+msgid "Participants"
+msgstr ""
+
+#: templates/base/group_detail.html:21
+msgid "There is no participant"
+msgstr ""
+
+#: templates/base/group_detail.html:26
+msgid "Sign up for the group"
+msgstr ""
+
+#: templates/base/group_detail.html:29
+msgid "Close group"
+msgstr ""
+
+#: templates/base/group_detail.html:31
+msgid "You need more than 2 participants to close the group"
+msgstr ""
+
+#: templates/base/group_form.html:12 templates/base/inscription_form.html:8
+msgid "Save"
+msgstr ""
+
+#: templates/base/group_list.html:5 templates/base/group_list.html:10
+msgid "Groups"
+msgstr ""
+
+#: templates/base/group_list.html:13
+msgid "New group"
+msgstr ""
+
+#: templates/base/home.html:8 templates/base/home.html:57
+msgid "Secret Santa"
+msgstr "Secret Santa"
+
+#: templates/base/home.html:9
+msgid "Planning a Secret Santa gift"
+msgstr ""
+
+#: templates/base/home.html:10
+msgid "exchange between friends"
+msgstr ""
+
+#: templates/base/home.html:11
+msgid "created by"
+msgstr ""
+
+#: templates/base/home.html:13
+msgid "Create group"
+msgstr ""
+
+#: templates/base/home.html:14
+msgid "Join an existing group"
+msgstr ""
+
+#: templates/base/home.html:17
+msgid "Learn More"
+msgstr ""
+
+#: templates/base/home.html:23
+msgid ""
+"Every year, around the Christmas season, people from all over the world "
+"exchange gifts"
+msgstr ""
+
+#: templates/base/home.html:24
+msgid ""
+"To keep things interesting, you can randomly assign people to give the gift "
+"to others"
+msgstr ""
+
+#: templates/base/home.html:41
+msgid "Create a group"
+msgstr ""
+
+#: templates/base/home.html:42
+msgid "Create a group and invite the people you want, friends or co-workers"
+msgstr ""
+
+#: templates/base/home.html:48
+msgid "Indicate your preferences"
+msgstr ""
+
+#: templates/base/home.html:49
+msgid "Each person should indicate what type of gifts they prefer"
+msgstr ""
+
+#: templates/base/home.html:58
+msgid "Planning a Secret Santa gift exchange between friends"
+msgstr ""
+
+#: templates/base/inscription_form.html:3
+msgid "Inscription"
+msgstr ""
+
+#: templates/base/inscriptions.html:4
+msgid "Inscriptions"
+msgstr ""
+
+#: templates/base/inscriptions.html:10
+msgid "Secret Santas open"
+msgstr ""
+
+#: templates/base/inscriptions.html:14
+msgid "Secret Santas closed"
+msgstr ""
+
+#: templates/base/signup.html:3 templates/base/signup.html:7
+#: templates/base/signup.html:10
+msgid "Sign up"
+msgstr ""
+
+#: templates/registration/login.html:3 templates/registration/login.html:7
+#: templates/registration/login.html:10
+msgid "Login"
+msgstr ""
