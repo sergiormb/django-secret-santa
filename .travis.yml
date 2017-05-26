@@ -31,7 +31,6 @@ before_script:
 script:
   - python manage.py test
   - coverage run --source=base ./manage.py test --settings=secret_santa.settings.production base
-  - coverage run --source=api ./manage.py test --settings=secret_santa.settings.production api
 
 after_success:
   - coverage report
