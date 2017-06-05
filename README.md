@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/sergiormb/django-secret-santa.svg?branch=master)](https://travis-ci.org/sergiormb/django-secret-santa)
 [![Coverage Status](https://coveralls.io/repos/github/sergiormb/django-secret-santa/badge.svg?branch=master)](https://coveralls.io/github/sergiormb/django-secret-santa?branch=master)
-[![Heroku](https://heroku-badge.herokuapp.com/?app=django-secret-santa)]
+[![Heroku](https://heroku-badge.herokuapp.com/?app=django-secret-santa)](http://django-secret-santa.herokuapp.com)
 
 # Django Secret Santa #
 
