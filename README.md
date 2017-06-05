@@ -1,9 +1,13 @@
 [![Build Status](https://travis-ci.org/sergiormb/django-secret-santa.svg?branch=master)](https://travis-ci.org/sergiormb/django-secret-santa)
 [![Coverage Status](https://coveralls.io/repos/github/sergiormb/django-secret-santa/badge.svg?branch=master)](https://coveralls.io/github/sergiormb/django-secret-santa?branch=master)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=django-secret-santa)]
 
 # Django Secret Santa #
 
 A project made in Django 1.10 for the exchange of gifts at Christmas
+
+API-REST: 
+- http://django-secret-santa.herokuapp.com/api/docs/
 
 ## Features ##
 
